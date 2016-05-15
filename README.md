@@ -8,6 +8,12 @@ AdminLTE Asset Bundle
 后台的皮肤，本来是蛮好用的。但对国内用户就操蛋了，里面使用了google的字体，后台访问受限。
 
 
+希望增加的功能：
+----
+皮肤是好看了。但需要内置组件的皮肤，还没有具体到每一个组件的皮肤更新。
+因为希望增加组件相关的引用，自动弄上样式，而不是在Yii引用时，写一堆关于class的名字
+
+
 !["Yii2 AdminLTE Presentation"](https://cloud.githubusercontent.com/assets/874234/7603896/753228ee-f943-11e4-9d42-2a31b41eb42d.jpg)
 
 This package contains an [Asset Bundle for Yii 2.0 Framework](http://www.yiiframework.com/doc-2.0/guide-structure-assets.html)
