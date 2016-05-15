@@ -3,9 +3,14 @@ AdminLTE Asset Bundle
 
 *Backend UI for Yii2 Framework, based on [AdminLTE](https://github.com/almasaeed2010/AdminLTE)*
 
+改它的初衷：
+----
+后台的皮肤，本来是蛮好用的。但对国内用户就操蛋了，里面使用了google的字体，后台访问受限。
+
+
 !["Yii2 AdminLTE Presentation"](https://cloud.githubusercontent.com/assets/874234/7603896/753228ee-f943-11e4-9d42-2a31b41eb42d.jpg)
 
-This package contains an [Asset Bundle for Yii 2.0 Framework](http://www.yiiframework.com/doc-2.0/guide-structure-assets.html) 
+This package contains an [Asset Bundle for Yii 2.0 Framework](http://www.yiiframework.com/doc-2.0/guide-structure-assets.html)
 which registers the CSS files for the AdminLTE user-interface.
 
 The CSS files are installed via Yii's recommended usage of the `fxp/composer-asset-plugin` v1.1.1 or later.
@@ -19,15 +24,8 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install AdminLTE v2 run:
 
 ```
-php composer.phar require dmstr/yii2-adminlte-asset "2.*"
+php composer.phar require tsaoko/yii2-adminlte-asset "2.*"
 ```
-
-To install AdminLTE v1 run:
-
-```
-php composer.phar require dmstr/yii2-adminlte-asset "1.*"
-```
-
 
 
 Quick Start
@@ -42,24 +40,9 @@ For Yii 2 [Application Template](https://github.com/yiisoft/yii2-app-advanced) o
     'view' => [
          'theme' => [
              'pathMap' => [
-                '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+                '@app/views' => '@vendor/tsaoko/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
              ],
          ],
-    ],
-],
-```
-
-
-For [Phundament 4](https://github.com/phundament/app)
-
-```php
-'components' => [
-    'view' => [
-        'theme' => [
-            'pathMap' => [
-                '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/phundament/app'
-            ],
-        ],
     ],
 ],
 ```
@@ -84,7 +67,7 @@ By default the extension uses blue skin for AdminLTE. You can change it in confi
 'components' => [
     'assetManager' => [
         'bundles' => [
-            'dmstr\web\AdminLteAsset' => [
+            'tsaoko\web\AdminLteAsset' => [
                 'skin' => 'skin-black',
             ],
         ],
@@ -92,9 +75,9 @@ By default the extension uses blue skin for AdminLTE. You can change it in confi
 ],
 ```
 
-And then just replace class of body `skin-blue`. You can use `AdminLteHelper::skinClass()` if you don't want to alter every view file when you change skin color. 
+And then just replace class of body `skin-blue`. You can use `AdminLteHelper::skinClass()` if you don't want to alter every view file when you change skin color.
 ```html
-<body class="<?= \dmstr\helpers\AdminLteHelper::skinClass() ?>">
+<body class="<?= \tsaoko\helpers\AdminLteHelper::skinClass() ?>">
 ```
 
 **Note:** Use `AdminLteHelper::skinClass()` only if you override the skin through configuration. Otherwise you will not get the correct css class of body.
@@ -164,6 +147,3 @@ Further Information
 -------------------
 
 For AdminLTE documentation, please read https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html
-
-> Namespacing rules follow the Yii 2.0 framework structure, eg. `dmstr\web` for the Asset Bundle.
- 
